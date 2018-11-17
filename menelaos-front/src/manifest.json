@@ -1,8 +1,8 @@
 {
-  "name": "menelaos-front",
-  "short_name": "menelaos-front",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Menelaos",
+  "short_name": "Menelaos",
+  "theme_color": "#610B0B",
+  "background_color": "#E6E6E6",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
