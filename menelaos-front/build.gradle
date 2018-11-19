@@ -1,0 +1,13 @@
+plugins {
+  id "com.moowork.node" version "1.2.0"
+}
+
+task buildAngularProd(type: Exec) {
+  group 'build'
+  commandLine 'ng', 'build', '--prod'
+}
+
+task buildAngular(type: Exec) {
+  group 'build'
+  commandLine 'ng', 'build'
+}

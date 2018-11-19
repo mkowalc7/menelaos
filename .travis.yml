@@ -1,0 +1,29 @@
+stages:
+  - build
+  - name: deploy
+    if: type != pull_request AND branch = master
+jobs:
+  include:
+    - stage: build
+      language: node_js
+      node_js:
+        - "8.9"
+      before_script:
+        - cd menelaos-front/
+        - npm install -g @angular/cli
+        - npm install --save-dev @angular-devkit/build-angular
+      script:
+        - npm run build
+
+    - stage: build
+      language: java
+
+    - stage: deploy
+      language: minimal
+      deploy:
+        provider: heroku
+        api_key:
+          secure: $HEROKU_TOKEN
+        app: menelaos
+        on:
+          branch: master

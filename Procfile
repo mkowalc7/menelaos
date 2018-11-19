@@ -1,0 +1,1 @@
+web: java -Dspring.profiles.active=prod -Dserver.port=$PORT -jar menelaos-backend/build/libs/menelaos-backend-0.0.1-SNAPSHOT.jar

@@ -30,3 +30,20 @@ dependencies {
     compileOnly('org.projectlombok:lombok')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
+
+test {
+    testLogging {
+        events "passed", "skipped", "failed"
+        exceptionFormat "full"
+    }
+}
+
+task copyStaticResources(type: Copy) {
+    from '../menelaos-front/dist/menelaos-front/'
+    into './src/main/resources/static/'
+}
+
+
+task cleanStaticResources(type: Delete) {
+    delete './src/main/resources/static/'
+}

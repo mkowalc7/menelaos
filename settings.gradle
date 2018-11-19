@@ -1,2 +1,2 @@
 rootProject.name = 'menelaos'
-include 'menelaos-backend'
+include 'menelaos-backend', 'menelaos-front'

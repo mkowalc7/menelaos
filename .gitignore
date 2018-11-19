@@ -4,6 +4,7 @@
 /menelaos-front/dist
 /menelaos-front/tmp
 /menelaos-front/out-tsc
+/menelaos-front/.gradle
 
 # dependencies
 /menelaos-front/node_modules
@@ -45,6 +46,7 @@
 
 /menelaos-backend/.gradle
 /menelaos-backend/build/
+/menelaos-backend/src/main/resources/static
 /menelaos-backend/!gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###

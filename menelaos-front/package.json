@@ -7,10 +7,17 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "buildprod": "ng build --prod",
+    "prebuildprod": "npm install",
+    "postbuildprod": "npm run deploy",
+    "deploy": "cp -r dist/menelaos-front/ ../menelaos-backend/src/main/resources/static/"
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "~0.10.0",
+    "@angular/cli": "~7.0.6",
+    "@angular/compiler-cli": "~7.0.0",
     "@angular/animations": "~7.0.0",
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
@@ -27,9 +34,6 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.10.0",
-    "@angular/cli": "~7.0.6",
-    "@angular/compiler-cli": "~7.0.0",
     "@angular/language-service": "~7.0.0",
     "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
