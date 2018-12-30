@@ -9,6 +9,9 @@
 # dependencies
 /menelaos-front/node_modules
 
+# frontend test spec
+*.spec.ts
+
 # IDEs and editors
 /menelaos-front/.idea
 /menelaos-front/.project
